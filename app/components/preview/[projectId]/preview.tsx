@@ -159,7 +159,7 @@ const preview = () => {
     return (
       <>
         <div className="flex flex-col items-center justify-center h-160">
-          <BobbingDots className="size-10" />
+          <BobbingDots className="size-12" />
           <p className="text-md">Hang on for a moment... </p>
         </div>
       </>
