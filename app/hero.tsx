@@ -55,9 +55,9 @@ const hero = () => {
       <Navbar />
       <div className="relative pointer-events-auto flex flex-col space-y-5 items-center justify-center text-center py-8 px-4 sm:px-20 lg:px-24 ">
         <div className="absolute w-full h-full pointer-events-none inset-0 z-30 bg-black/30" />
-        <div className="text-center flex pl-1.5 gap-2 py-1 rounded-full w-75 bg-pink-300/15">
+        <div className="text-center flex pl-1.5 gap-2 py-1 rounded-full bg-pink-300/15">
           <span className="py-0.5 px-3 bg-primary rounded-3xl">New</span>
-          <span className="py-0.5 flex">Try 30 days free trial option</span>
+          <span className="py-0.5 flex">Try some credits free for trial</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="0"
@@ -86,13 +86,13 @@ const hero = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           onSubmit={onSubmitHandler}
-          className="flex relative items-center space-y-2 text-sm lg:text-base mx-2 md:mx-0 justify-center py-4"
+          className="relative space-y-2 text-sm lg:text-base mx-2 md:mx-0 py-4"
         >
           <div className="relative transition-all py-4 duration-500 hover:border-2 hover:border-primary/90 w-90 md:w-140 lg:w-180 rounded-lg border-2 border-primary/40 bg-black/60">
             <textarea
               required
               onChange={(event) => setInput(event.target.value)}
-              className="px-4 resize-none text-primary outline-0 overflow-y-hidden no-scrollbar w-180 h-35"
+              className="px-4 resize-none text-primary outline-0 w-90 md:w-140 lg:w-180 overflow-y-hidden no-scrollbar h-35"
               placeholder="Describe your project to build website..."
             />
             <div className="flex justify-start px-4 border-t pt-2">
