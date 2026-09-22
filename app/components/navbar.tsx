@@ -134,7 +134,7 @@ const navbar = () => {
       </div>
       {/* mobile menu */}
       <div
-        className={`flex ${credits ? "lg:hidden" : "md:hidden"}  justify-between gap-20 w-90 sm:w-100 items-center px-6 md:px-8 lg:px-20 xl:px-32 border border-primary/30 rounded-full my-10 py-3`}
+        className={`flex ${credits ? "lg:hidden" : "md:hidden"}  justify-between gap-20 w-88 sm:w-100 items-center px-6 md:px-8 lg:px-20 xl:px-32 border border-primary/30 rounded-full my-10 py-3`}
       >
         <div className="px-0 flex gap-2">
           <img src="/ai-logo-white.png" alt="" className="w-10 h-10" />
