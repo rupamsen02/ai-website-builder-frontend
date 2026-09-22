@@ -46,7 +46,7 @@ const navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="flex flex-col relative justify-center overflow-hidden items-center px-0 sm:px-5 lg:px-20"
+      className="flex flex-col relative justify-center overflow-hidden items-center px-0 sm:px-5 lg:px-10 xl:px-13"
     >
       <div
         className={` ${credits ? "hidden lg:flex" : "hidden md:flex"} items-center border border-primary/10 backdrop-blur-sm ${credits ? "xl:w-280" : "xl:220"} gap-8 text-center justify-between overflow-hidden rounded-full px-4 my-10 py-3`}
@@ -149,7 +149,7 @@ const navbar = () => {
           <img src="/list.png" alt="" className="w-7 h-7" />
         </button>
         <div
-          className={`fixed inset-0 z-10 bg-black/95 flex flex-col overflow-hidden items-center py-50 sm:py-30 ${credits ? "lg:py-30" : "md:py-30"} transition-transform duration-300 ${credits ? "lg:hidden" : "md:hidden"} ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}
+          className={`fixed inset-0 z-10 bg-black/95 flex flex-col overflow-hidden items-center justify-center h-screen transition-transform duration-300 ${credits ? "lg:hidden" : "md:hidden"} ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <button
             className={`${credits ? "lg:hidden" : "md:hidden"} absolute top-8 right-8`}
