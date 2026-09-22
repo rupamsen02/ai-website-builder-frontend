@@ -26,10 +26,11 @@ export function SignOut({ className }: SignOutProps) {
       window.location.replace(`${basePaths.auth}/${viewPaths.auth.signIn}`);
     },
     onSuccess: () =>
-      navigate({
-        to: `${basePaths.auth}/${viewPaths.auth.signIn}`,
-        replace: true,
-      }),
+      // navigate({
+      //   to: `${basePaths.auth}/${viewPaths.auth.signIn}`,
+      //   replace: true,
+      // }),
+      window.location.replace(`${basePaths.auth}/${viewPaths.auth.signIn}`),
   });
 
   const hasSignedOut = useRef(false);
