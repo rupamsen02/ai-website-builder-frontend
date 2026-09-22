@@ -14,7 +14,6 @@ import {
   FullscreenIcon,
   HomeIcon,
   Laptop,
-  ProjectorIcon,
   SaveIcon,
   SmartphoneIcon,
   TabletSmartphoneIcon,
@@ -78,7 +77,6 @@ const project = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const previewRef = useRef<ProjectPreviewRef>(null);
-  // const [loading, setLoading] = useState(true);
   const { data: session, isPending } = authClient.useSession();
   const router = useRouter();
   const queryClient = useQueryClient();

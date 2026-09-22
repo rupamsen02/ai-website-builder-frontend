@@ -13,21 +13,21 @@ const navbar = () => {
   const pathname = usePathname();
   const [credits, setCredits] = useState(0);
   const { data: session } = authClient.useSession();
-  // const getCredits = async () => {
-  //   try {
-  //     const { data } = await api.get("/api/user/credits");
-  //     setCredits(data.credits);
-  //   } catch (error: any) {
-  //     toast.error(error.message);
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   //User is available
-  //   if (session?.user) {
-  //     getCredits();
-  //   }
-  // }, [session?.user]); // these function gets executed whenever user changes
+  const getCredits = async () => {
+    try {
+      const { data } = await api.get("/api/user/credits");
+      setCredits(data.credits);
+    } catch (error: any) {
+      toast.error(error.message);
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    //User is available
+    if (session?.user) {
+      getCredits();
+    }
+  }, [session?.user]); // these function gets executed whenever user changes
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";

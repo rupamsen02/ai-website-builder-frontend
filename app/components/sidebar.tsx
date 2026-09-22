@@ -217,7 +217,7 @@ const sidebar = ({
               }
             })}
           {isGenerating && (
-            <div className="flex items-start ml-11 gap-3 justify-start">
+            <div className="flex items-start ml-14 gap-3 justify-start">
               <div className="w-8 h-8 rounded-full bg-linear-to-br from-cyan-300 to-cyan-400 flex items-center justify-center">
                 <BotIcon className="size-5 text-white" />
               </div>
@@ -239,7 +239,7 @@ const sidebar = ({
           )}
           <div ref={messageRef} />
         </div>
-        <form onSubmit={handleRevisions} className="relative m-3 px-6">
+        <form onSubmit={handleRevisions} className="relative m-3 pl-10 px-6">
           <div className="flex items-center gap-2">
             <textarea
               onChange={(e) => setInput(e.target.value)}
