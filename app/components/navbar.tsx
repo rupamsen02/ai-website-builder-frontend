@@ -18,6 +18,9 @@ const navbar = () => {
       const { data } = await api.get("/api/user/credits");
       setCredits(data.credits);
     } catch (error: any) {
+      if (error.response?.status === 401) {
+        return;
+      }
       toast.error(error.message);
       console.log(error);
     }
