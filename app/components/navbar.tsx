@@ -49,7 +49,7 @@ const navbar = () => {
       className="flex flex-col relative justify-center overflow-hidden items-center px-0 sm:px-5 lg:px-20"
     >
       <div
-        className={` ${credits ? "hidden lg:flex" : "hidden md:flex"} items-center border border-primary/10 backdrop-blur-sm ${credits ? "xl:w-230" : "xl:220"} gap-8 text-center justify-between overflow-hidden rounded-full px-4 my-10 py-3`}
+        className={` ${credits ? "hidden lg:flex" : "hidden md:flex"} items-center border border-primary/10 backdrop-blur-sm ${credits ? "xl:w-280" : "xl:220"} gap-8 text-center justify-between overflow-hidden rounded-full px-4 my-10 py-3`}
       >
         <Link href="/" className="px-0 flex flex-wrap gap-1">
           <img src="/ai-logo-white.png" alt="" className="w-10 h-10" />
