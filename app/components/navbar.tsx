@@ -13,38 +13,21 @@ const navbar = () => {
   const pathname = usePathname();
   const [credits, setCredits] = useState(0);
   const { data: session } = authClient.useSession();
-  const getCredits = async (signal?: AbortSignal) => {
+  const getCredits = async () => {
     try {
-      const { data } = await api.get("/api/user/credits", { signal });
+      const { data } = await api.get("/api/user/credits");
       setCredits(data.credits);
     } catch (error: any) {
-      if (error.code === "ERR_CANCELED") {
-        return;
-      }
-      if (error.response?.status === 401) {
-        return;
-      }
       toast.error(error.message);
       console.log(error);
     }
   };
-  // useEffect(() => {
-  //   //User is available
-  //   if (session?.user) {
-  //     getCredits();
-  //   }
-  // }, [session?.user]); // these function gets executed whenever user changes
   useEffect(() => {
-    if (!session?.user) return;
-
-    const controller = new AbortController();
-
-    getCredits(controller.signal);
-
-    return () => {
-      controller.abort();
-    };
-  }, [session?.user]);
+    //User is available
+    if (session?.user) {
+      getCredits();
+    }
+  }, [session?.user]); // these function gets executed whenever user changes
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";

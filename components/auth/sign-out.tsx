@@ -19,17 +19,9 @@ export function SignOut({ className }: SignOutProps) {
 
   const { mutate: signOut } = useSignOut(authClient, {
     onError: () => {
-      // navigate({
-      //   to: `${basePaths.auth}/${viewPaths.auth.signIn}`,
-      //   replace: true
-      // })
       window.location.replace(`${basePaths.auth}/${viewPaths.auth.signIn}`);
     },
     onSuccess: () =>
-      // navigate({
-      //   to: `${basePaths.auth}/${viewPaths.auth.signIn}`,
-      //   replace: true,
-      // }),
       window.location.replace(`${basePaths.auth}/${viewPaths.auth.signIn}`),
   });
 
